@@ -29,6 +29,7 @@ $(document).ready(function() {
       $('#first-number').text(firstNumber)
     }
   })
+
   $('.operator').on('click', function() {
     if (!firstNumber || isCalculated) {
       return false
@@ -39,13 +40,13 @@ $(document).ready(function() {
 
     $('#operator').text($(this).text())
   })
+
   $('.equal').on('click', function() {
     if (isCalculated) {
       return false
     }
 
     isCalculated = true
-
     firstNumber = parseInt(firstNumber)
     secondNumber = parseInt(secondNumber)
 
